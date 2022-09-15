@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+:root {
+  --primary-color: #34444f;
+  --border-color: #e3e5e4;
+  --background-color: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--background-color);
+}
+
+.nav {
+  width: 100%;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #d1a574;
+  background: #d2f4c0;
+}
+
+.draggable-list {
+  padding: 0;
+  list-style-type: none;
+  color: var(--primary-color);
+}
+
+.draggable-list li:first-child {
+  margin-top: 1em;
+}
+
+.draggable-list li {
+  margin-bottom: 0.4em;
+  display: flex;
+
+  background: #e3e5e4;
+  border: 0.6em solid #e3e5e4;
+  border-radius: 0.6em;
+}
+
+.draggable-list li.right {
+  color: #3ae374;
+}
+.draggable-list li.wrong {
+  color: #ff3838;
+}
+
+.draggable-list:not(:last-of-type) {
+  border-bottom: 10px solid var(--background-color);
+}
+
+.draggable-list .number {
+  width: 3.6rem;
+  height: 3.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  background: var(--border-color);
+}
+
+.draggable-list li.over .draggable {
+  background: #eaeaea;
+}
+
+.draggable-list .person-name {
+  margin: 0 1.1em 0 0;
+}
+
+.draggable {
+  padding: 1em;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.check-btn {
+  padding: 0.6em 1.4em;
+  font-size: 1.8em;
+  border: none;
+  color: #d1a574;
+  background: #d2f4c0;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+
+.check-btn:active {
+  transform: scale(0.9);
+}
